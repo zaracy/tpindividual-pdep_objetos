@@ -1,0 +1,46 @@
+import solucion.*
+
+describe "Tests de PDEP Entertainment" {
+
+  const laRenga = new BandaRock(nombre = "La Renga", solosDeGuitarra = 5)
+  const facilB = new BandaTrap(nombre = "Fácil B", tieneHielo = true)
+  const losEsteparios = new BandaIndie(nombre = "Los Esteparios", cantidadInstrumentos = 4)
+
+  const abonoVipJuan = new AbonoVip(porcentajeDescuento = 0.20)
+  const juan = new Asistente(dineroDisponible = 5000, abono = abonoVipJuan)
+  const pedro = new Asistente(dineroDisponible = 0, abono = abonoFan)
+
+  method initialize() {
+    productora.impuesto(100)
+    productora.agregarBanda(laRenga)
+    productora.agregarBanda(facilB)
+    productora.agregarBanda(losEsteparios)
+    productora.agregarAsistente(juan)
+    productora.agregarAsistente(pedro)
+  }
+
+  test "Calculo de popularidad y presupuesto de bandas" {
+    assert.equals(500, laRenga.popularidad())
+    assert.equals(1010000, laRenga.presupuesto())
+
+    assert.equals(1000, facilB.popularidad())
+    assert.equals(1000000, facilB.presupuesto())
+  }
+
+  test "Un asistente con saldo positivo compra entrada correctamente" {
+    juan.comprarEntrada(laRenga, new Date(day = 10, month = 5, year = 2025))
+    assert.equals(4120, juan.dineroDisponible())
+    assert.equals(1, juan.cantidadDeEntradas())
+  }
+
+  test "Un asistente sin saldo da error al comprar" {
+    assert.throwsException({
+      pedro.comprarEntrada(laRenga, new Date(day = 10, month = 5, year = 2026))
+    })
+  }
+
+  test "Bonificar VIP aumenta 1% el descuento" {
+    productora.bonificarAsistentesVip()
+    assert.equals(0.21, abonoVipJuan.porcentajeDescuento())
+  }
+}
