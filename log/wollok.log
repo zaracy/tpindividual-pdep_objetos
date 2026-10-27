@@ -1,3 +1,12 @@
 {"level":"info","message":"⌛ Building environment","timeElapsed":117,"timestamp":"2026-10-27T01:28:36.079Z"}
 {"level":"info","message":"⌛ Validating src/solucion.wlk","timeElapsed":119,"timestamp":"2026-10-27T01:53:42.103Z"}
 {"level":"info","message":"⌛ Validating src/solucion.wlk","timeElapsed":104,"timestamp":"2026-10-27T01:53:43.596Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":114,"timestamp":"2026-10-27T01:57:45.069Z"}
+{"level":"info","message":"Removing diagnostics from /c:/Users/Usuario/Desktop/tp-objetos-pdep-entertainment/tests/solucion,wtest","timestamp":"2026-10-27T01:57:45.257Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":112,"timestamp":"2026-10-27T02:04:22.020Z"}
+{"level":"info","message":"Removing diagnostics from /c:/Users/Usuario/Desktop/tp-objetos-pdep-entertainment/tests/solucion.wtest","timestamp":"2026-10-27T02:04:22.207Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":107,"timestamp":"2026-10-27T02:04:28.400Z"}
+{"level":"info","message":"Removing diagnostics from /c:/Users/Usuario/Desktop/tp-objetos-pdep-entertainment/tests","timestamp":"2026-10-27T02:04:28.573Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":129,"timestamp":"2026-10-27T03:41:15.282Z"}
+{"level":"info","message":"⌛ Building environment","timeElapsed":122,"timestamp":"2026-10-27T03:41:15.407Z"}
+{"level":"info","message":"⌛ Validating src/solucion.wtest","timeElapsed":189,"timestamp":"2026-10-27T03:41:15.934Z"}
